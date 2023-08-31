@@ -1,0 +1,315 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    
+}
+
+
+.contenedor{
+    width: 100%;
+   
+}
+
+.barra{
+    display: flex;
+    width: 100%;
+}
+
+.tituloblog{
+    margin-left: 10%;
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'PT Sans';
+    font-size: 1.1rem;
+}
+
+
+
+h1{
+    font-family: 'PT Sans';
+    color: white;
+}
+
+span{
+    font-weight: bold;
+}
+
+.opcionesnav{
+    margin-left: 50%;
+    padding: 2rem;
+}
+
+.opcion{
+    margin-right: 1rem;
+    font-family: 'PT Sans';
+    font-weight: lighter;
+}
+
+.texto-header{
+    margin-top: 8rem;
+    margin-bottom: 17rem;
+    text-align: center;
+    font-family: 'PT Sans';
+    font-size: 1.3rem;
+    color: white;
+}
+
+.no-margin{
+    font-size: 1rem;
+}
+h2{
+    font-family: 'PT Sans';
+}
+
+.contenido-principal-contenedor{
+
+    padding-left: 9rem;
+    padding-right: 9rem;
+    height: max-content;
+    display: flex;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.imagen{
+    max-width: 100%;
+    width: 40rem;
+}
+
+
+
+
+.blog{
+    padding: 0;
+    width: 90%;
+    height: max-content;
+    display: block;
+}
+
+h3, p{
+    max-width: 100%;
+    padding: 0;
+    font-family: 'PT SANS';
+    
+}
+
+.btn-btn-primario{
+    border: 20px;
+    border-color: black;
+    background-color: black;
+    color: white;
+    font-family:'PT Sans';
+    padding: 5px;
+    
+}
+
+.btn-btn-secundario{
+    
+    border: 20px;
+    background-color: rgb(102, 54, 46);
+    color: white;
+    font-family:'PT Sans';
+    padding: 5px;
+}
+
+main{
+    flex: 0.5;
+}
+
+.cursos{
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    font-family:'PT Sans' ;
+}
+
+.cursos-lista{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer{
+    background-color: black;
+    color: white;
+}
+
+.navegacion{
+    padding: 2rem;
+    margin-left: 50%;
+}
+
+.barra p{
+    margin-left: 10%;
+    font-size: 2rem;
+}
+
+/*nosotros.html*/
+.subtitulo{
+    
+    font-family: 'PT SANS';
+    font-weight: bold;
+    
+}
+
+.contain-subtitulo{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+    text-align: center;
+    width: 100%;
+}
+
+
+.contenedor-nosotros{
+    display: flex;
+    margin-bottom: 3rem ;
+}
+
+
+.contenido-principal-contenedor2{
+    padding-left: 9rem;
+    padding-right: 9rem;
+}
+
+#imagentazas{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.cont-img-nos{
+    width: 90rem;
+   
+}
+.cont-texto-nos{
+    padding-left: 1rem;
+    height: max-content;
+}
+
+.cont-texto-nos p{
+    font-family: 'PT Sans';
+}
+
+
+/*cursos.html*/
+
+
+.contenido-principal-contenedor3{
+    padding-left: 9rem;
+    padding-right: 9rem;
+}
+
+.contenedor-curso{
+    display: flex;
+    
+    
+}
+
+.cont-img-curso{
+    
+    width: 40rem;
+
+}
+
+.imgcont{
+    max-width: 100%;
+    max-height: 100;
+}
+
+.campo{
+    font-weight: bold;
+}
+
+.separador{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#ultimocont{
+    margin-bottom: 3rem;
+}
+
+/*contacto.html*/
+
+.contenido-principal-contenedor4{
+    padding-left: 9rem;
+    padding-right: 9rem;
+    
+
+}
+
+.contenedor-imgcon{
+    max-width: 100%;
+ 
+    
+    
+}
+
+
+.contenedor-form{
+
+    padding: 2rem;
+    margin-bottom: 6rem;
+    
+   
+    
+    
+}
+
+
+.formulario{
+    background-color: white;
+
+}
+
+.etiqueta{
+
+    font-weight: bold;
+    font-family: 'PT Sans';
+    font-size: 1rem;
+}
+
+.cuadrotext{
+
+    width: 90%;
+    font-family: 'PT Sans';
+    font-size: 1rem;
+    
+    
+}
+
+.enviar{
+    margin-top: 2rem ;
+    float: right;
+    margin-right: 2.1rem;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-family: 'PT Sans';
+    font-weight: bold;
+    width: 5rem;
+}
+
+#mensaje{
+    font-family: 'PT Sans';
+    font-size: 1rem;
+}
+
+
