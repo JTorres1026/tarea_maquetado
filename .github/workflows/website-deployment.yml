@@ -5,8 +5,6 @@ on:
     branches: [ "dev_branch" ]  # Se activa al hacer push a "dev_branch"
 
 env:
-  AWS_REGION: us-east-1  # Región del repositorio ECR
-  ECR_REPOSITORY: coffee-website  # Nombre del repositorio ECR
   IMAGE_TAG: latest  # Etiqueta de la imagen
 
 jobs:
@@ -18,12 +16,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Get secrets from BitWarden #Obtener las claves de BitWarden
+        uses: bitwarden/sm-action@v2
+        with:
+          access_token: ${{ secrets.BW_ACCESS_TOKEN }}
+          secrets: |
+            c1e4230f-1bbc-472f-807a-b29001372dca > AWS_ACCESS_KEY_ID
+            8ea1690a-f77b-4c39-b25d-b290013760b3 > AWS_SECRET_ACCESS_KEY
+            1368ee86-345d-442d-bb9c-b290015605f5 > AWS_REGION
+            1c846775-48c6-400b-b767-b29001564a82 > ECR_REPOSITORY
+
       # Paso 2: Configurar credenciales de AWS
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
       # Paso 3: Iniciar sesión en AWS ECR
