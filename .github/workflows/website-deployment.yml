@@ -1,0 +1,26 @@
+name: Despliegue de sitio web de café
+
+on:
+  push:
+    branches: [ "dev_branch" ]  # Se activa cuando se hace push a la rama "dev_branch"
+
+jobs:
+  build-docker-image:
+    runs-on: ubuntu-latest  # Se ejecuta en un entorno Ubuntu
+
+    steps:
+      # Paso 1: Obtener el código del repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Descarga el código del repositorio
+
+      # Paso 2: Construir la imagen de Docker con la etiqueta "latest"
+      - name: Build Docker image
+        run: |
+          docker build -t nombre-imagen:latest .
+
+
+
+
+
+  
+
