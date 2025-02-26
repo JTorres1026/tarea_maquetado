@@ -39,7 +39,7 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
-      # Paso 4: Construir la imagen de Docker
+      # Paso 4: Construir y enviar la imagen de Docker al repositorio (AWS ECR)
       - name: Build Docker image
         run: |
           docker build -t ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }} .
