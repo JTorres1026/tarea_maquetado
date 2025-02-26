@@ -1,26 +1,48 @@
-name: Despliegue de sitio web de café
+name: Construir y enviar imagen a AWS ECR
 
 on:
   push:
-    branches: [ "dev_branch" ]  # Se activa cuando se hace push a la rama "dev_branch"
+    branches: [ "dev_branch" ]  # Se activa al hacer push a "dev_branch"
+
+env:
+  AWS_REGION: us-east-1  # Región del repositorio ECR
+  ECR_REPOSITORY: coffee-website  # Nombre del repositorio ECR
+  IMAGE_TAG: latest  # Etiqueta de la imagen
 
 jobs:
-  Deploy-website:
+  build-and-push:
     runs-on: ubuntu-latest  # Se ejecuta en un entorno Ubuntu
 
     steps:
       # Paso 1: Obtener el código del repositorio
       - name: Checkout repository
-        uses: actions/checkout@v3  # Descarga el código del repositorio
+        uses: actions/checkout@v3
 
-      # Paso 2: Construir la imagen de Docker con la etiqueta "latest"
+      # Paso 2: Configurar credenciales de AWS
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      # Paso 3: Iniciar sesión en AWS ECR
+      - name: Login to AWS ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      # Paso 4: Construir la imagen de Docker
       - name: Build Docker image
         run: |
-          docker build -t coffee-website:latest .
+          docker build -t ${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }} .
 
+      # Paso 5: Etiquetar la imagen para ECR
+      - name: Tag Docker image
+        run: |
+          docker tag ${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }} \
+            ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}
 
-
-
-
-  
-
+      # Paso 6: Subir la imagen a AWS ECR
+      - name: Push Docker image
+        run: |
+          docker push ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}
