@@ -16,7 +16,7 @@ jobs:
       # Paso 2: Construir la imagen de Docker con la etiqueta "latest"
       - name: Build Docker image
         run: |
-          docker build -t nombre-imagen:latest .
+          docker build -t coffee-website:latest .
 
 
 
