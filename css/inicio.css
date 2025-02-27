@@ -1,315 +1,272 @@
-
-body{
+body {
     padding: 0;
     margin: 0;
     width: 100%;
     height: 100%;
 }
 
-header{
+header {
     width: 100%;
     display: flex;
     flex-direction: column;
     background-image: url(../img/banner.jpg);
     background-size: cover;
-    
 }
 
-
-.contenedor{
+.contenedor {
     width: 100%;
-   
 }
 
-.barra{
+.barra {
     display: flex;
     width: 100%;
 }
 
-.tituloblog{
+.tituloblog {
     margin-left: 10%;
-    
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
-    font-family: 'PT Sans';
+    font-family: "PT Sans";
     font-size: 1.1rem;
 }
 
-
-
-h1{
-    font-family: 'PT Sans';
+h1 {
+    font-family: "PT Sans";
     color: white;
 }
 
-span{
+span {
     font-weight: bold;
 }
 
-.opcionesnav{
+.opcionesnav {
     margin-left: 50%;
     padding: 2rem;
 }
 
-.opcion{
+.opcion {
     margin-right: 1rem;
-    font-family: 'PT Sans';
+    font-family: "PT Sans";
     font-weight: lighter;
 }
 
-.texto-header{
+.texto-header {
     margin-top: 8rem;
     margin-bottom: 17rem;
     text-align: center;
-    font-family: 'PT Sans';
+    font-family: "PT Sans";
     font-size: 1.3rem;
     color: white;
 }
 
-.no-margin{
+.no-margin {
     font-size: 1rem;
 }
-h2{
-    font-family: 'PT Sans';
+h2 {
+    font-family: "PT Sans";
 }
 
-.contenido-principal-contenedor{
-
+.contenido-principal-contenedor {
     padding-left: 9rem;
     padding-right: 9rem;
     height: max-content;
     display: flex;
 }
 
-img{
+img {
     max-width: 100%;
     max-height: 100%;
 }
 
-.imagen{
+.imagen {
     max-width: 100%;
     width: 40rem;
 }
 
-
-
-
-.blog{
+.blog {
     padding: 0;
     width: 90%;
     height: max-content;
     display: block;
 }
 
-h3, p{
+h3,
+p {
     max-width: 100%;
     padding: 0;
-    font-family: 'PT SANS';
-    
+    font-family: "PT SANS";
 }
 
-.btn-btn-primario{
+.btn-btn-primario {
     border: 20px;
     border-color: black;
     background-color: black;
     color: white;
-    font-family:'PT Sans';
+    font-family: "PT Sans";
     padding: 5px;
-    
 }
 
-.btn-btn-secundario{
-    
+.btn-btn-secundario {
     border: 20px;
     background-color: rgb(102, 54, 46);
     color: white;
-    font-family:'PT Sans';
+    font-family: "PT Sans";
     padding: 5px;
 }
 
-main{
+main {
     flex: 0.5;
 }
 
-.cursos{
+.cursos {
     margin-left: 2rem;
     margin-top: 0.5rem;
-    font-family:'PT Sans' ;
+    font-family: "PT Sans";
 }
 
-.cursos-lista{
+.cursos-lista {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.site-footer{
+.site-footer {
     background-color: black;
     color: white;
 }
 
-.navegacion{
+.navegacion {
     padding: 2rem;
     margin-left: 50%;
 }
 
-.barra p{
+.barra p {
     margin-left: 10%;
     font-size: 2rem;
 }
 
 /*nosotros.html*/
-.subtitulo{
-    
-    font-family: 'PT SANS';
+.subtitulo {
+    font-family: "PT SANS";
     font-weight: bold;
-    
 }
 
-.contain-subtitulo{
+.contain-subtitulo {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    
+
     text-align: center;
     width: 100%;
 }
 
-
-.contenedor-nosotros{
+.contenedor-nosotros {
     display: flex;
-    margin-bottom: 3rem ;
+    margin-bottom: 3rem;
 }
 
-
-.contenido-principal-contenedor2{
+.contenido-principal-contenedor2 {
     padding-left: 9rem;
     padding-right: 9rem;
 }
 
-#imagentazas{
+#imagentazas {
     max-width: 100%;
     max-height: 100%;
 }
 
-.cont-img-nos{
+.cont-img-nos {
     width: 90rem;
-   
 }
-.cont-texto-nos{
+.cont-texto-nos {
     padding-left: 1rem;
     height: max-content;
 }
 
-.cont-texto-nos p{
-    font-family: 'PT Sans';
+.cont-texto-nos p {
+    font-family: "PT Sans";
 }
-
 
 /*cursos.html*/
 
-
-.contenido-principal-contenedor3{
+.contenido-principal-contenedor3 {
     padding-left: 9rem;
     padding-right: 9rem;
 }
 
-.contenedor-curso{
+.contenedor-curso {
     display: flex;
-    
-    
 }
 
-.cont-img-curso{
-    
+.cont-img-curso {
     width: 40rem;
-
 }
 
-.imgcont{
+.imgcont {
     max-width: 100%;
     max-height: 100;
 }
 
-.campo{
+.campo {
     font-weight: bold;
 }
 
-.separador{
+.separador {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-#ultimocont{
+#ultimocont {
     margin-bottom: 3rem;
 }
 
 /*contacto.html*/
 
-.contenido-principal-contenedor4{
+.contenido-principal-contenedor4 {
     padding-left: 9rem;
     padding-right: 9rem;
-    
-
 }
 
-.contenedor-imgcon{
+.contenedor-imgcon {
     max-width: 100%;
- 
-    
-    
 }
 
-
-.contenedor-form{
-
+.contenedor-form {
     padding: 2rem;
     margin-bottom: 6rem;
-    
-   
-    
-    
 }
 
-
-.formulario{
+.formulario {
     background-color: white;
-
 }
 
-.etiqueta{
-
+.etiqueta {
     font-weight: bold;
-    font-family: 'PT Sans';
+    font-family: "PT Sans";
     font-size: 1rem;
 }
 
-.cuadrotext{
-
+.cuadrotext {
     width: 90%;
-    font-family: 'PT Sans';
+    font-family: "PT Sans";
     font-size: 1rem;
-    
-    
 }
 
-.enviar{
-    margin-top: 2rem ;
+.enviar {
+    margin-top: 2rem;
     float: right;
     margin-right: 2.1rem;
     background-color: black;
     color: white;
     font-size: 1rem;
-    font-family: 'PT Sans';
+    font-family: "PT Sans";
     font-weight: bold;
     width: 5rem;
 }
 
-#mensaje{
-    font-family: 'PT Sans';
+#mensaje {
+    font-family: "PT Sans";
     font-size: 1rem;
 }
-
-
